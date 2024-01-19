@@ -1,0 +1,13 @@
+#group-username label, #group-password label {
+  display: block;
+}
+#group-username input, #group-password input {
+  display: block;
+  margin-bottom: 1em;
+}
+#group-remember label {
+  margin-left: 0.5em;
+}
+.input-group {
+  margin-bottom: 1em;
+}
