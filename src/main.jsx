@@ -6,10 +6,10 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Root from './routes/root.jsx';
 import ErrorPage from './error-page.jsx';
 import Login from './routes/login.jsx';
-import Profile from './routes/profile.jsx';
+import Profile, { loader as profileLoader } from './routes/profile.jsx';
 import Home from './routes/home.jsx';
 import userLoader from './auth/userLoader.jsx';
-import { CookiesProvider } from 'react-cookie';
+import ControlPanel from './routes/controlpanel.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     loader: userLoader,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Home />
       },
       {
@@ -27,8 +27,14 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "profile",
+        path: "profile/:username",
         element: <Profile />,
+        loader: profileLoader
+      },
+      {
+        path: "controlpanel",
+        element: <ControlPanel />,
+        loader: userLoader
       }
     ]
   }

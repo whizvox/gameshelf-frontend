@@ -1,4 +1,3 @@
-import { CookiesProvider } from "react-cookie";
 import { Outlet, useLoaderData } from "react-router-dom";
 
 function ProfileIcon({ user }) {
@@ -12,9 +11,8 @@ function ProfileIcon({ user }) {
 
 export default function Root() {
   const user = useLoaderData();
-  console.log("USER : " + user);
   return (
-    <CookiesProvider>
+    <>
       <header>
         <a href="/">
           <h1 className="site-name">Game Shelf</h1>
@@ -28,7 +26,7 @@ export default function Root() {
         </nav>
         <div>
           {user ?
-            <a href="/profile"><ProfileIcon user={user} /></a> :
+            <a href={`/profile/${user.username}`}><ProfileIcon user={user} /></a> :
             <a className="header-login-button" href="/login">Login</a>
           }
         </div>
@@ -36,6 +34,6 @@ export default function Root() {
       <main>
         <Outlet />
       </main>
-    </CookiesProvider>
+    </>
   );
 }

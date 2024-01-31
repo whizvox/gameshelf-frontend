@@ -1,5 +1,10 @@
-import { useEffect, useState } from "react";
-import { Navigate, useLoaderData } from "react-router-dom";
+import { Navigate, Route, useLoaderData, useParams } from "react-router-dom";
+
+export function loader({ params }) {
+  return fetch(`/api/profile?username=${params.username}`)
+    .then(res => res.json())
+    .then(res => res.data);
+}
 
 function getMonth(month) {
   switch (month) {
