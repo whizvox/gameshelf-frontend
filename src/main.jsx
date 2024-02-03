@@ -9,7 +9,8 @@ import Login from './routes/login.jsx';
 import Profile, { loader as profileLoader } from './routes/profile.jsx';
 import Home from './routes/home.jsx';
 import userLoader from './auth/userLoader.jsx';
-import ControlPanel from './routes/controlpanel.jsx';
+import ControlPanel from './routes/control.jsx';
+import ControlUsers from './routes/control/controlusers.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,9 +33,20 @@ const router = createBrowserRouter([
         loader: profileLoader
       },
       {
-        path: "controlpanel",
-        element: <ControlPanel />,
-        loader: userLoader
+        path: "control",
+        loader: userLoader,
+        children: [
+          {
+            index: true,
+            loader: userLoader,
+            element: <ControlPanel />
+          },
+          {
+            path: "users",
+            loader: userLoader,
+            element: <ControlUsers />
+          }
+        ]
       }
     ]
   }

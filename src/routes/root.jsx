@@ -4,7 +4,7 @@ function ProfileIcon({ user }) {
   return (
     <div className="profile-icon">
       <span className="profile-icon-username">{user.username}</span>
-      <img className="profile-icon-avatar" src="profile.png" />
+      <img className="profile-icon-avatar" src="/profile.png" />
     </div>
   );
 }

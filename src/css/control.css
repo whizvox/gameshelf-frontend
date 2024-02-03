@@ -6,18 +6,18 @@
   display: block;
   text-decoration: none;
   color: black;
-  background-color: lightgray;
+  background-color: rgb(60, 199, 199);
   font-size: 1.5em;
   border-radius: 1em;
   padding: 0.8em;
   margin: 0.2em;
   text-align: center;
-  border: 0.2em solid lightgray;
+  border: 0.2em solid rgb(38, 126, 126);
   width: 5em;
 }
 .control-option:hover {
-  background-color: rgb(155, 155, 155);
-  border: 0.2em solid rgb(240, 240, 240);
+  background-color: rgb(38, 126, 126);
+  border: 0.2em solid rgb(60, 199, 199);
   color: white;
 }
 .control-option > * {
@@ -27,4 +27,7 @@
   height: 1.5em;
   margin: auto;
   margin-bottom: 0.5em;
+}
+.control-option:hover img {
+  filter: invert(100%);
 }

@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,700;1,6..12,400;1,6..12,700&display=swap');
+
 /* Everything */
 body {
-  font-family: sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 /* Header */
@@ -52,6 +54,7 @@ nav a:hover {
 }
 .profile-icon-avatar {
   height: 3em;
+  filter: invert(100%);
 }
 .header-login-button {
   text-decoration: none;
@@ -66,4 +69,46 @@ nav a:hover {
 main {
   width: 80vw;
   margin: auto;
+}
+
+/* Standard forms */
+form.input-group {
+  margin-bottom: 1em;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 0.2em;
+}
+.input-group-checkbox label {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+.option-any {
+  font-style: italic;
+}
+.input-group-row {
+  display: flex;
+  flex-direction: row;
+}
+.input-group-row > * {
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+.input-group-row > *:first-child {
+  margin-left: 0;
+}
+.input-group-row > *:last-child {
+  margin-right: 0;
+}
+form button {
+  display: inline-block;
+  background-color: rgb(99, 199, 166);
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 0.4em;
+}
+form button:hover {
+  cursor: pointer;
+  background-color: rgb(60, 117, 98);
 }
