@@ -16,7 +16,7 @@ export class Role {
 export const ROLE_GUEST = new Role("GUEST", 1);
 export const ROLE_MEMBER = new Role("MEMBER", 2);
 export const ROLE_EDITOR = new Role("EDITOR", 3);
-export const ROLE_MODERATOR = new Role("NODERATOR", 4);
+export const ROLE_MODERATOR = new Role("MODERATOR", 4);
 export const ROLE_ADMIN = new Role("ADMIN", 5);
 export const ROLE_SUPERUSER = new Role("SUPERUSER", 6);
 
